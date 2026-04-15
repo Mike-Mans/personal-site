@@ -14,14 +14,25 @@
 
     <header class="hero">
       <h1 class="typewriter" id="typewriter"></h1>
-      <p class="subtitle" id="subtitle"></p>
+      <div class="hero-row">
+        <div class="hero-text">
+          <p class="subtitle" id="subtitle"></p>
+          <div class="hero-links" id="hero-links">
+            Socials: <a href="https://github.com/Mike-Mans" target="_blank" rel="noopener">GitHub</a>
+            <span class="sep">/</span>
+            <a href="https://www.linkedin.com/in/2004-michael-mansour/" target="_blank" rel="noopener">LinkedIn</a>
+            <br>
+            Email: <a href="mailto:mmansour5@math.ucla.edu">mmansour5 [at] math [dot] ucla [dot] edu</a>
+          </div>
+        </div>
+        <img src="Michael_Mansour.png" alt="Michael Mansour" class="avatar" id="avatar">
+      </div>
     </header>
 
     <nav id="nav" class="nav hidden">
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
-      <a href="#cv">CV / Docs</a>
-      <a href="#socials">Socials</a>
+      <a href="#cv">Resume/CV</a>
     </nav>
 
     <main id="main-content" class="hidden">
@@ -30,19 +41,46 @@
         <h2>// Projects</h2>
         <div class="card-grid">
           <div class="card">
-            <h3>Project One</h3>
-            <p>Short description of what you built and the tech behind it.</p>
-            <a href="#" class="link">View &rarr;</a>
+            <h3>SUMChain + SUMail</h3>
+            <p>Co-designing a Rust Layer-1 blockchain with round-robin PoA/PoS validator rotation and protocol-level token standards. Built a TypeScript Chrome extension wallet with an in-memory PBKDF2 vault, a React/Vite web client, and a SwiftUI mobile wallet reading on-chain data directly from SUMChain. SUMail is the ecosystem's encrypted messaging layer.</p>
+            <a href="https://sumchain.io/" target="_blank" rel="noopener" class="link">SUMChain &rarr;</a>
+            &nbsp;
+            <a href="https://sumail.xyz/" target="_blank" rel="noopener" class="link">SUMail &rarr;</a>
           </div>
           <div class="card">
-            <h3>Project Two</h3>
-            <p>Short description of what you built and the tech behind it.</p>
-            <a href="#" class="link">View &rarr;</a>
+            <h3>hangg</h3>
+            <p>Full-stack real-time social platform (React Native, Next.js, NestJS, PostgreSQL on GCP) with Firebase auth, signed-URL GCS uploads, deep linking, and adaptive Socket.IO polling. Engineered a 4-layer location verification system surviving force-quit, plus disk caching/prefetching that cut ~40% of redundant image downloads (~$756/mo egress savings projected at 50K DAU).</p>
+            <a href="https://hangg.app/" target="_blank" rel="noopener" class="link">hangg.app &rarr;</a>
           </div>
           <div class="card">
-            <h3>Project Three</h3>
-            <p>Short description of what you built and the tech behind it.</p>
-            <a href="#" class="link">View &rarr;</a>
+            <h3>Subgraph Matching with Structural Equivalence</h3>
+            <p>Coming soon.</p>
+          </div>
+          <div class="card">
+            <h3>GNN for Ethereum AML Detection</h3>
+            <p>Adapted IBM's Multi-GNN from edge-level Bitcoin classification to node-level Ethereum sanctions detection via transfer learning under a 14,140:1 class imbalance. Identified placement / layering / integration laundering phases through SHAP attribution on 2-hop ego subgraphs, fed by a Rust pipeline aggregating 90M+ transactions into weekly Parquet graphs.</p>
+            <a href="https://github.com/Innovation-On-Blockchain/Transfer-Learning-Model-From-MultiGNN" target="_blank" rel="noopener" class="link">Training &rarr;</a>
+            &nbsp;
+            <a href="https://github.com/Innovation-On-Blockchain/Data-Visualization" target="_blank" rel="noopener" class="link">Viz &rarr;</a>
+            &nbsp;
+            <a href="https://github.com/Innovation-On-Blockchain/Data-Preprocessing-For-AML" target="_blank" rel="noopener" class="link">Preprocessing &rarr;</a>
+          </div>
+        </div>
+
+        <h3 class="subsection-heading">// Other</h3>
+        <div class="mini-grid">
+          <div class="mini-card">
+            <h4>SNIP + OmniNode</h4>
+            <p>Coming soon.</p>
+          </div>
+          <div class="mini-card">
+            <h4>B+Tree SQL Engine</h4>
+            <p>From-scratch C++ relational engine: state-machine SQL parser, B+Tree index over binary storage, Shunting-Yard query pipeline.</p>
+            <a href="https://github.com/Mike-Mans/C-SQL-CS008-Final-Project" target="_blank" rel="noopener" class="link">GitHub &rarr;</a>
+          </div>
+          <div class="mini-card">
+            <h4>WantSUM?</h4>
+            <p>Decentralized, serverless iMessage coordination engine. An iMessage extension that turns a text thread into a live collaborative cart &mdash; friends browse restaurant menus together and build a shared group order without leaving Messages.</p>
           </div>
         </div>
       </section>
@@ -51,45 +89,33 @@
         <h2>// Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <span class="date">2024 &ndash; Present</span>
-            <h3>Role Title</h3>
-            <p class="company">Company Name</p>
-            <p>Brief description of responsibilities and impact.</p>
+            <span class="date">2026</span>
+            <h3>Subgraph Inexact Attributed Matching &mdash; Directed Research</h3>
+            <p class="company" style="color: #2774AE;">University of California, Los Angeles</p>
+            <p>Directed research on inexact attributed subgraph matching.</p>
           </div>
           <div class="timeline-item">
-            <span class="date">2022 &ndash; 2024</span>
-            <h3>Role Title</h3>
-            <p class="company">Company Name</p>
-            <p>Brief description of responsibilities and impact.</p>
+            <span class="date">2023 &ndash; 2024</span>
+            <h3>Mission Operations &amp; Ground Data Systems Intern</h3>
+            <p class="company" style="color: #FF6C0C;">Caltech (IPAC) &mdash; Lunar Trailblazer</p>
+            <p>Ran simulated spacecraft maneuvers and hardware/software troubleshooting for a NASA-led lunar mission. Analyzed quaternion telemetry to monitor Keep-Out Zone violations, and built Python / InfluxDB / OpenMCT dashboards used by dozens of operators to track hundreds of real-time telemetry streams.</p>
           </div>
           <div class="timeline-item">
-            <span class="date">2020 &ndash; 2022</span>
-            <h3>Role Title</h3>
-            <p class="company">Company Name</p>
-            <p>Brief description of responsibilities and impact.</p>
+            <span class="date">2022 &ndash; 2025</span>
+            <h3>Teaching &amp; Pedagogy</h3>
+            <p class="company">UCLA &middot; PCC &middot; Mathnasium</p>
+            <p>Undergraduate Reader (Grader) for UCLA Math 115A &mdash; Linear Algebra (Spring 2024). Mathematics Tutor at the PCC Success Center covering Multivariable Calculus, ODEs, and Physics (2024). Mathnasium Instructor (2023&ndash;2024).</p>
           </div>
         </div>
       </section>
 
       <section id="cv" class="section">
-        <h2>// CV / Docs</h2>
+        <h2>//Resume & CV</h2>
         <div class="doc-links">
-          <a href="#" class="doc-link">
+          <a href="details.pdf" target="_blank" rel="noopener" class="doc-link">
             <span class="doc-icon">&#9634;</span>
-            <span>Resume (PDF)</span>
+            <span>CV (PDF)</span>
           </a>
-          <a href="#" class="doc-link">
-            <span class="doc-icon">&#9634;</span>
-            <span>Cover Letter Template</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="socials" class="section">
-        <h2>// Socials</h2>
-        <div class="socials-grid">
-          <a href="https://github.com/Mike-Mans" target="_blank" rel="noopener" class="social-link">GitHub</a>
-          <a href="https://www.linkedin.com/in/2004-michael-mansour/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
         </div>
       </section>
 

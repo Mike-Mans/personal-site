@@ -3,6 +3,8 @@
   const tagline = "Software Developer | UCLA Mathematics Alum";
   const typewriterEl = document.getElementById("typewriter");
   const subtitleEl = document.getElementById("subtitle");
+  const heroLinks = document.getElementById("hero-links");
+  const avatar = document.getElementById("avatar");
   const nav = document.getElementById("nav");
   const main = document.getElementById("main-content");
   const footer = document.getElementById("footer");
@@ -26,6 +28,8 @@
   function revealContent() {
     setTimeout(() => {
       subtitleEl.classList.add("visible");
+      heroLinks.classList.add("visible");
+      avatar.classList.add("visible");
     }, 300);
 
     setTimeout(() => {

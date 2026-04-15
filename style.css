@@ -38,6 +38,33 @@ body {
   padding: 4rem 0 2rem;
 }
 
+.hero-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #36454F;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.avatar.visible {
+  opacity: 1;
+}
+
 .typewriter {
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
@@ -63,6 +90,35 @@ body {
 
 .subtitle.visible {
   opacity: 1;
+}
+
+.hero-links {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: rgba(16, 19, 20, 0.55);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hero-links.visible {
+  opacity: 1;
+}
+
+.hero-links a {
+  color: #36454F;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.hero-links a:hover {
+  color: #101314;
+  text-decoration: underline;
+}
+
+.hero-links .sep {
+  margin: 0 0.55rem;
+  color: rgba(16, 19, 20, 0.35);
 }
 
 @keyframes blink-caret {
@@ -148,6 +204,64 @@ body {
 
 .card .link:hover {
   text-decoration: underline;
+}
+
+/* ── Mini Cards (Other Projects) ───────────────── */
+.subsection-heading {
+  font-size: 1rem;
+  color: rgba(16, 19, 20, 0.55);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.mini-card {
+  border: 1px solid #36454F;
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  background: #FFFFFA;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.mini-card:hover {
+  border-color: #101314;
+  transform: translateY(-2px);
+}
+
+.mini-card h4 {
+  color: #101314;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.mini-card p {
+  font-size: 0.8rem;
+  color: rgba(16, 19, 20, 0.65);
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.mini-card .link {
+  color: #36454F;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.mini-card .link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .mini-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ── Timeline (Experience) ─────────────────────── */

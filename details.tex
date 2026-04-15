@@ -1,0 +1,76 @@
+\documentclass[10pt, letterpaper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Custom formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=15pt}
+\hypersetup{colorlinks=true, urlcolor=blue}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+    {\huge \textbf{Michael Mansour}} \\
+    \vspace{2pt}
+    Burbank, CA | (818) 823-5726 | \href{mailto:michaelmansour2004@gmail.com}{michaelmansour2004@gmail.com} \\
+    \vspace{2pt}
+\end{center}
+
+\section{Education}
+\textbf{University of California, Los Angeles (UCLA)} \hfill \textbf{Spring 2026} \\
+B.S. Mathematics of Computation | GPA: 3.70 \\
+\textit{Relevant Coursework: Network/Graph Theory, Optimization, 
+Numerical Analysis, Machine Learning, Algorithms/Complexity, Real Analysis, Probability/Statistics, Signal Processing, Cryptography}
+
+\vspace{2pt}
+
+\noindent \textbf{Pasadena City College} \hfill \textbf{Spring 2024} \\
+Mathematics \& Computer Science | GPA: 4.00
+
+\section{Professional Experience}
+
+\noindent \textbf{Caltech, Lunar Trailblazer} \hfill \textbf{2023 – 2024} \\
+\textit{Mission Operations and Ground Data Systems Intern}
+\begin{itemize}
+    \item Managed spacecraft simulated maneuvers and hardware/software troubleshooting for NASA-led lunar mission.
+    \item Analyzed quaternion/spatial rotation telemetry for attitude determination and control system telemetry analysis, specifically to monitor Keep-Out Zone Violations of maneuvers.
+    \item Developed telemetry applications and dashboards using Python, InfluxDB, and OpenMCT — used by dozens of operators to monitor hundreds of telemetry streams in real time.
+    \item Automated mission control procedures and trained incoming cohorts on telemetry plotting and testbed systems.
+\end{itemize}
+
+\section{Technical Projects}
+\noindent \textbf{SUM: Layer-1 Blockchain \& Web3 Ecosystem (\href{https://sumchain.io/}{SUMChain} / \href{https://sumail.xyz/}{SUMail})} \hfill \textbf{2025 – Present}
+\begin{itemize}
+    \item Co-designing a Layer-1 PoA/PoS blockchain entirely in Rust. Proposed a round-robin validator rotation for deterministic block production and protocol-level token standards. 
+    \item Fully architected a Chrome Extension using TypeScript for secure signing/authentication, featuring a private vault where keys exist only in memory after PBKDF2 decryption. 
+    \item Frontend: Developed a React/Vite-based interface and a SwiftUI mobile wallet, integrating protocol-level endpoints to retrieve, verify, and display on-chain data directly from  SUMChain.
+\end{itemize}
+
+\noindent \textbf{\href{https://hangg.app/}{hangg}: Real-Time Social Platform} \hfill \textbf{2025 – Present}
+\begin{itemize}
+    \item Developing a full-stack social platform (React Native, Next.js, NestJS, PostgreSQL on GCP) with Firebase auth, signed-URL media uploads to GCS, cross-platform deep linking, and adaptive Socket.IO polling to balance real-time accuracy against server load. Monitored GCP dashboards tracking ingress/egress volume, request latency, connection counts, etc.
+    \item Engineered a location verification system with 4 fallback layers that survive app force-quit, feeding a spatial clustering algorithm that gates feature access based on physical proximity of group members.
+    \item Optimized frontend features, rendering, and media delivery with disk caching and prefetching, eliminating ~40\% of redundant image downloads per session, projected to save about \$756/mo in egress at 50K DAU scale.
+\end{itemize}
+
+\noindent \textbf{GNN for Ethereum Anti-Money Laundering Detection} \hfill \textbf{2026}
+\begin{itemize}
+    \item Adapted IBM's Multi-GNN architecture from edge-level Bitcoin AML classification to node-level Ethereum sanctions detection using transfer learning with extreme class imbalance (14,140:1 ratio) and weighted cross-entropy loss. [\href{https://github.com/Innovation-On-Blockchain/Transfer-Learning-Model-From-MultiGNN}{training}]
+    \item Identified distinct laundering phases — placement (high fan-out, low-value dispersal), layering (temporally compressed bursts across intermediaries), and integration (hub-spoke consolidation via high-value channels) — through ego-centric subgraph analysis and SHAP/gradient feature attribution on 2-hop neighborhoods. [\href{https://github.com/Innovation-On-Blockchain/Data-Visualization}{visualization}]
+    \item Engineered a Rust data pipeline with crash recovery to collect, label, and aggregate blockchain transactions into weekly directed graphs in Parquet format (90M+ transactions, 33M+ addresses). [\href{https://github.com/Innovation-On-Blockchain/Data-Preprocessing-For-AML}{preprocessing}, \href{https://github.com/Innovation-On-Blockchain/Data-Modeling}{modeling}]
+\end{itemize}
+
+\noindent \textbf{\href{https://github.com/Mike-Mans/C-SQL-CS008-Final-Project}{B-Plus-Tree SQL Engine} (C++)} \hfill \textbf{2024}
+\begin{itemize}
+    \item Built a relational database engine from scratch — including a SQL parser (state machines implementation), a B-Plus-Tree indexing layer with binary file storage, and a query execution pipeline supporting SELECT, INSERT, and conditional filtering (Shunting-Yard/Boolean RPN).
+\end{itemize}
+
+\section{Skills \& Teaching}
+\textbf{Languages/Tools:} C++, Rust, Python (PyTorch, NumPy, Pandas, scikit-learn, Matplotlib), SQL, Swift, JavaScript/TypeScript (React, Tailwind), Docker/Kubernetes, GCP (BigQuery, Dataflow, Cloud Composer), Git \\
+\textbf{Teaching:} Undergraduate Reader (Grader) for UCLA Math 115A (Linear Algebra); Mathematics Tutor at PCC Success Center (Multivariable Calculus, ODEs, Physics); Mathnasium Instructor.
+
+\end{document}

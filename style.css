@@ -411,29 +411,6 @@ body {
   color: #FFFFFA;
 }
 
-/* ── Socials ───────────────────────────────────── */
-.socials-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.social-link {
-  color: #FFFFFA;
-  text-decoration: none;
-  padding: 0.75rem 1.25rem;
-  border: 1px solid #36454F;
-  border-radius: 4px;
-  background: #36454F;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.social-link:hover {
-  border-color: #101314;
-}
-
 /* ── Footer ────────────────────────────────────── */
 footer {
   margin-top: 3rem;

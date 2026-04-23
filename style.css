@@ -126,6 +126,41 @@ body {
   50% { border-color: transparent; }
 }
 
+/* ── Page Header (non-Home pages) ──────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0 1.25rem;
+}
+
+.page-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-header .page-name {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #101314;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+
+.page-header .page-name:hover {
+  color: #36454F;
+}
+
+.avatar--small {
+  width: 56px;
+  height: 56px;
+  opacity: 1;
+}
+
 /* ── Nav ───────────────────────────────────────── */
 .nav {
   display: flex;
@@ -149,6 +184,12 @@ body {
 
 .nav a:hover {
   color: #36454F;
+}
+
+.nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 
 /* ── Sections ──────────────────────────────────── */
@@ -305,9 +346,21 @@ body {
   margin-bottom: 0.35rem;
 }
 
-.timeline-item p:last-child {
+.timeline-item p:not(.company) {
   font-size: 0.9rem;
   color: rgba(16, 19, 20, 0.6);
+}
+
+.timeline-item a {
+  color: #36454F;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.timeline-item a:hover {
+  color: #101314;
 }
 
 /* ── Docs / CV ─────────────────────────────────── */

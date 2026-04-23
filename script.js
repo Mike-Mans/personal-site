@@ -9,10 +9,13 @@
   const main = document.getElementById("main-content");
   const footer = document.getElementById("footer");
 
-  subtitleEl.textContent = tagline;
+  if (subtitleEl) subtitleEl.textContent = tagline;
+
+  // Typewriter flow only runs on Home (the only page with #typewriter).
+  if (!typewriterEl) return;
 
   let i = 0;
-  const speed = 90; // ms per character
+  const speed = 90;
 
   function type() {
     if (i < name.length) {
@@ -25,35 +28,27 @@
     }
   }
 
-  function revealContent() {
+  function reveal(el, delay) {
+    if (!el) return;
     setTimeout(() => {
-      subtitleEl.classList.add("visible");
-      heroLinks.classList.add("visible");
-      avatar.classList.add("visible");
-    }, 300);
-
-    setTimeout(() => {
-      nav.classList.remove("hidden");
-      nav.style.opacity = "1";
-      nav.style.transform = "translateY(0)";
-      nav.style.pointerEvents = "auto";
-    }, 600);
-
-    setTimeout(() => {
-      main.classList.remove("hidden");
-      main.style.opacity = "1";
-      main.style.transform = "translateY(0)";
-      main.style.pointerEvents = "auto";
-    }, 900);
-
-    setTimeout(() => {
-      footer.classList.remove("hidden");
-      footer.style.opacity = "1";
-      footer.style.transform = "translateY(0)";
-      footer.style.pointerEvents = "auto";
-    }, 1100);
+      el.classList.remove("hidden");
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+      el.style.pointerEvents = "auto";
+    }, delay);
   }
 
-  // Start after a short pause
+  function revealContent() {
+    setTimeout(() => {
+      subtitleEl?.classList.add("visible");
+      heroLinks?.classList.add("visible");
+      avatar?.classList.add("visible");
+    }, 300);
+
+    reveal(nav, 600);
+    reveal(main, 900);
+    reveal(footer, 1100);
+  }
+
   setTimeout(type, 500);
 })();
